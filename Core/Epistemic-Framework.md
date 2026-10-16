@@ -47,5 +47,9 @@ When a whole proposition rests on mixed evidence, state the proposition once, th
 
 ## 4. Authority
 
-Only the human Steward may raise a tag after personally verifying the receipt.  
-AIs may propose tags. AIs may never raise them.
+Only the human Steward may **raise, lower, or change** a tag on standing material — after personally verifying the receipt, or consciously accepting a lower bar when evidence is thin.
+
+AIs may propose tags (including proposed changes) in drafts and sidecars.  
+AIs may never apply, raise, lower, or finalize a tag on standing material.
+
+Automated topic-candidate lines (see `CORE.md`) may carry a **proposed** tag at most [Likely]; that proposal is not a Steward decision until the Steward acts.

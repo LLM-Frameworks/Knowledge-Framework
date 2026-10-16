@@ -1,0 +1,24 @@
+name: Blog
+type: method
+status: nominated
+purpose: Turn settled references and briefing fuel into published posts under the A Stone's Throw standard — evidence-tagged, steel-manned, Steward red-penned.
+triggers:
+  keywords:
+    - blog
+    - post
+    - A Stone's Throw
+    - draft
+    - publish
+    - seed
+  ideas:
+    - when turning a reference or briefing item into a post
+    - when running the red-pen / quality gate on a draft
+    - when capturing or organizing post seeds by topic
+how_to_use: |
+  Inputs: References (settled positions), Briefing output (when present), Settings/seeds.md, optional style-anchor.
+  1. Pick or capture a seed (by topic in Settings/seeds.md).
+  2. Draft in the author's voice (Settings/drafts/ for in-progress work).
+  3. Run the quality gate: evidence tags + receipts, steel-man the other side, memory claims capped and admitted in prose.
+  4. Nothing publishes without the Steward's word.
+  5. Published posts live outside this app (GitHub library canonical; Substack and other views draw from it).
+depends_on: []

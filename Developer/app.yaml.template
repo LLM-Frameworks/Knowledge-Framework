@@ -1,0 +1,18 @@
+# Template — copy this file into any new app folder as app.yaml
+# AIs may draft a completed version; only the Steward approves it.
+
+name: Example App
+type: method                  # rules | knowledge | method
+status: nominated             # nominated | in-process | installed
+purpose: One-line description of what this app does
+triggers:
+  keywords:
+    - example
+    - keyword
+  ideas:
+    - when this kind of problem appears
+    - when the user is trying to do X
+how_to_use: |
+  Step-by-step instructions an AI can follow.
+  Keep it short and actionable.
+depends_on: []                # optional list of other apps or Core modules

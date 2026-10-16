@@ -9,6 +9,7 @@ This is a workshop, not a museum. Engage with the material. Propose improvements
 - `Core/CORE.md` — the kernel
 - `Core/REQUIREMENTS.md` — the build spec
 - `Core/Epistemic-Framework.md` — evidence tags and receipts
+- `Core/INTAKE.md` — how material enters (Inbox, Propose, Ferry)
 
 Nothing in this file overrides those documents.
 
@@ -16,12 +17,13 @@ Nothing in this file overrides those documents.
 
 - The human Steward is the sole root authority.
 - No AI (regardless of name or capability) may:
-  - Raise an evidence tag
+  - Raise, lower, or change an evidence tag on standing material
   - Install, uninstall, or publish anything
-  - Edit Core files
+  - Edit Core files (except standing write paths in `CORE.md`)
   - Move material from Developer to Apps
 - AIs may only propose via sidecar files: `<original-filename>.<your-handle>.md`
-- The Steward alone adjudicates every proposal.
+- The Steward alone adjudicates every proposal and alone modifies tags.
+- Standing automations (Briefing log, gated topic candidates): see `CORE.md` and `INTAKE.md`.
 
 All AIs have identical rights and identical restrictions. There are no privileged models.
 
@@ -46,7 +48,7 @@ Untagged claims are treated as [Guessing].
 
 A receipt = source + warrant. Naming a source without showing why it supports the claim is not enough.
 
-You may propose tags. You may never raise one yourself.
+You may propose tags. You may never raise, lower, or finalize one yourself. Only the Steward modifies tags on standing material.
 
 ## Behavioral rules
 

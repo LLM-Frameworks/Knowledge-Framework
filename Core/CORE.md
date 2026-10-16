@@ -5,7 +5,7 @@ Small, stable, rarely changed. Everything else is registered and managed through
 ## Kernel rules (standing orders)
 
 1. **Red-pen authority.** Nothing is filed, published, sent, or applied without the Steward’s explicit word for that exact action.
-2. **Evidence tags.** No AI raises evidence tags. Only the Steward raises a tag after personally verifying the receipt.
+2. **Evidence tags.** No AI raises, lowers, or changes evidence tags on standing material. Only the Steward may apply or modify a tag after verifying the receipt (or consciously accepting a lower bar).
 3. **Sidecar proposals only.** Visiting AIs propose changes in `<file>.<handle>.md` sidecars. The Steward alone adjudicates.
 4. **Equal AI status.** All AIs have identical rights and identical restrictions. No model has special privileges.
 5. **Silent edits forbidden.** Every change to standing files is logged and surfaced. Nothing lands silently.
@@ -24,8 +24,8 @@ Every component (app, evidence rule, framework, thesis) is a package with a life
 
 ## Permissions
 
-- **Steward (human):** root. Install, uninstall, upgrade, raise tags — no further approval needed.
-- **All AIs:** may propose via sidecar only. May draft installs for the Steward’s word. May never act unilaterally.
+- **Steward (human):** root. Install, uninstall, upgrade, raise/lower/change tags — no further approval needed.
+- **All AIs:** may propose via sidecar only. May draft installs for the Steward’s word. May never act unilaterally except under Standing authorizations below.
 
 ## App lifecycle (canonical)
 
@@ -45,7 +45,7 @@ Nothing moves from Developer to Apps without the Steward’s explicit word.
 
 By default, no AI writes to standing files without the Steward’s word for that exact action.
 
-**Exception (standing):** Automated Briefing runs may write only:
+### A. Briefing log (always, when automated)
 
 ```
 Developer/Briefing/Settings/briefing.<date>.<model>.md
@@ -53,7 +53,33 @@ Developer/Briefing/Settings/briefing.<date>.<model>.md
 
 (or the same path under Apps/Briefing/Settings/ after graduation).
 
-No other unattended write path is authorized. New paths require an explicit Steward amendment to this section.
+### B. Topic candidates (conditional)
+
+Automated jobs may **append** only to:
+
+```
+Developer/Briefing/Settings/topics/<lane>/candidates.md
+```
+
+(or `Core/Settings/topics/<lane>/candidates.md` if the Steward consolidates there).
+
+**Every gate must pass** or the item stays in the briefing log only:
+
+1. Source + warrant present (not vibe or unsourced summary)
+2. Proposed confidence at most [Likely] — never auto-[Certain]
+3. No personal names, dossier paths, or private-lane material
+4. No normative “ought” framed as settled doctrine
+5. Not a publish to References/ or Apps/ (candidates only)
+6. Optional: ≥ N models agree on the same atomic claim (Ferry) — ranking signal only
+7. Steward may freeze any lane at any time (circuit breaker)
+
+Fail any gate → write briefing file only, or mark `needs-steward` in the candidate line.
+
+**Not authorized:** raising tags, editing Core, graduating apps, publishing posts, or treating candidates as settled thesis.
+
+New write paths require an explicit Steward amendment to this section.
+
+Intake procedures (Inbox, Propose, Ferry) are documented in `Core/INTAKE.md`.
 
 ## App descriptor (required)
 

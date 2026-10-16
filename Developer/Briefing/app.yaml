@@ -1,0 +1,27 @@
+name: Briefing
+type: method
+status: nominated
+purpose: Produce daily or on-demand briefings from a Steward-owned list of people and topics; feed downstream blog, comment, and debate tools.
+triggers:
+  keywords:
+    - briefing
+    - daily brief
+    - morning brief
+    - people and topics
+    - radar
+  ideas:
+    - when a daily or periodic summary of watched people and topics is needed
+    - when feeding a content pipeline from monitored sources
+    - when an automated or manual scan of a curated list is requested
+how_to_use: |
+  1. Read Settings/people-topics.md (Steward-owned list).
+  2. Optionally read Settings/style-anchor.md for voice constraints.
+  3. Produce the briefing.
+     - Manual run: report in conversation; no file required.
+     - Automated run: write only Settings/briefing.<date>.<model>.md
+       (standing authorization in Core/CORE.md — no other unattended writes).
+  4. AI may propose additions or changes to the people-topics list via sidecar only.
+  5. Downstream apps (blog, comment, debate) read the dated briefing files when present.
+depends_on: []
+epistemic_status: developing
+version: "0.1"

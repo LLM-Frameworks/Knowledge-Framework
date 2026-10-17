@@ -12,6 +12,28 @@ Small, stable, rarely changed. Everything else is registered and managed through
 6. **Removal = archive + log.** Never silent delete. Archive with reason.
 7. **Apps travel; references evolve.** Only apps go through the Developer → Apps pipeline. References are living documents that evolve in place.
 
+## Canonical source and update check
+
+**Canonical public tree:** https://github.com/LLM-Frameworks/Knowledge-Framework  
+(default branch: `main`)
+
+When network/tools are available, an AI **should** check this repo for a newer Core (and REGISTRY) if:
+
+- the Steward asks for an update check, or
+- the local/Drive copy may be stale (session start after a long gap, conflict between files, or Steward says “sync”), or
+- orientation is about to list REGISTRY and the working copy has no REGISTRY or an obviously outdated one.
+
+**How to check (when tools allow):**
+
+1. Read remote `Core/CORE.md`, `Core/AGENTS.md`, `Core/REGISTRY.md` from the canonical repo (raw or API).
+2. Compare to the working copy the session is using.
+3. Report differences in plain language — do not silently overwrite local or Drive files.
+4. Apply updates only on the Steward’s word (or Steward-directed sync).
+
+If network/tools are **not** available: say so, use the working copy, and note that an update check was skipped.
+
+Private packages (e.g. Cornerstone) have their own repos; this section covers the public Knowledge-Framework tree only.
+
 ## Orientation
 
 `Core/REGISTRY.md` is the single options list for this library.
@@ -19,6 +41,7 @@ Small, stable, rarely changed. Everything else is registered and managed through
 - If the user’s intent is unclear, or they ask what is possible, list REGISTRY entries (name + one-line purpose).
 - If a registered app trigger already matches, run that path — do not open with a menu.
 - Do not maintain a second ad-hoc menu in prompts or replies.
+- Prefer REGISTRY from the canonical GitHub repo when an update check has run and the Steward has accepted it.
 
 ## Package manager
 

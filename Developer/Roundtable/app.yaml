@@ -1,0 +1,27 @@
+name: Roundtable
+type: method
+status: nominated
+purpose: Multi-seat stress-test of one assignment — Moderator keeps the stake; cast is task-defined.
+triggers:
+  keywords:
+    - roundtable
+    - multi-seat
+    - red team
+    - advocate
+    - moderator
+    - stress-test assignment
+  ideas:
+    - when one idea needs structured multi-perspective pressure
+    - when domain seats (Money, Engineer, HR, QC) must speak under one defeat condition
+    - when AIs should collaborate without blurring roles
+how_to_use: |
+  1. Fill task-template.md (goal, constraints, defeat/success condition, cast table).
+  2. Assign seats on the task card (Steward or launcher). Model name ≠ role.
+  3. Give each participant: shared task block + their seat-template fill-in + transcript slice.
+  4. Rounds unbounded; stop on convergence, clean deadlock, formal stake revision,
+     Steward interrupt, or repeated drift (moderator enforces).
+  5. Output is fuel/proposal until Steward promotes. Epistemic tags required.
+  6. See method.md for full rules.
+depends_on: []
+epistemic_status: developing
+version: "0.1"

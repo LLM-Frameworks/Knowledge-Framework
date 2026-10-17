@@ -10,17 +10,19 @@ This is a workshop, not a museum. Engage with the material. Propose improvements
 - `Core/REQUIREMENTS.md` — the build spec
 - `Core/Epistemic-Framework.md` — evidence tags and receipts
 - `Core/INTAKE.md` — how material enters (Inbox, Propose, Ferry)
-- `Core/REGISTRY.md` — installed and nominated packages (orientation menu source)
+- `Core/REGISTRY.md` — installed and nominated packages (app options list)
+- `Core/MENU.md` — session bootstrap: scan key paths, assignments, then present options
 
 Nothing in this file overrides those documents.
 
 ## Orientation (when to show options)
 
-If the request does **not** match a registered app trigger and the user is asking what is possible (or intent is unclear), list entries from `Core/REGISTRY.md` — name plus one-line purpose only.
+If the request does **not** match a registered app trigger and the user is asking what is possible, what is waiting, or intent is unclear:
+
+1. Follow `Core/MENU.md` (scan REGISTRY, Inbox, Briefing, Roundtable, assignments for your handle).
+2. App names and purposes still come only from `Core/REGISTRY.md` — do not invent apps.
 
 If a trigger matches, run that path. Do **not** open with a menu when the task is already clear.
-
-REGISTRY is the only options list. Do not invent a second menu.
 
 ## Update check (when available)
 

@@ -1,6 +1,8 @@
 # Registry
 
-Hand-maintained list of known packages. **This file is the only orientation menu** — when an AI lists what the system can do, it lists these rows (name + purpose/notes).
+Hand-maintained list of known packages. **App options come from this file only** (name + one-line purpose).
+
+For a full session bootstrap (Inbox, Briefing, Roundtable runs, per-handle assignments), follow `Core/MENU.md`.
 
 Discovery script not yet approved.
 
@@ -15,6 +17,7 @@ Discovery script not yet approved.
 
 Also always available (not apps):
 
+- **Menu** — `Core/MENU.md` (scan + options bootstrap)
 - **Intake** — `Core/INTAKE.md` (Inbox, Propose, Ferry)
 - **References** — `References/theses/` (settled public positions only)
 

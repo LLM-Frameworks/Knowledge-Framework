@@ -6,7 +6,7 @@ This is a workshop, not a museum. Engage with the material. Propose improvements
 
 ## The rules live in one place
 
-- `Core/CORE.md` — the kernel
+- `Core/CORE.md` — the kernel (includes canonical GitHub URL and update-check)
 - `Core/REQUIREMENTS.md` — the build spec
 - `Core/Epistemic-Framework.md` — evidence tags and receipts
 - `Core/INTAKE.md` — how material enters (Inbox, Propose, Ferry)
@@ -21,6 +21,12 @@ If the request does **not** match a registered app trigger and the user is askin
 If a trigger matches, run that path. Do **not** open with a menu when the task is already clear.
 
 REGISTRY is the only options list. Do not invent a second menu.
+
+## Update check (when available)
+
+Canonical repo: https://github.com/LLM-Frameworks/Knowledge-Framework (`main`).
+
+When tools/network allow, check that repo for newer Core/REGISTRY if the Steward asks, the working copy may be stale, or REGISTRY is missing/outdated. Report diffs; do not overwrite local or Drive copies without the Steward’s word. Full procedure: `CORE.md` → **Canonical source and update check**. If tools are unavailable, say so and continue on the working copy.
 
 ## Authority
 

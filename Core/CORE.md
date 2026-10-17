@@ -12,6 +12,14 @@ Small, stable, rarely changed. Everything else is registered and managed through
 6. **Removal = archive + log.** Never silent delete. Archive with reason.
 7. **Apps travel; references evolve.** Only apps go through the Developer → Apps pipeline. References are living documents that evolve in place.
 
+## Orientation
+
+`Core/REGISTRY.md` is the single options list for this library.
+
+- If the user’s intent is unclear, or they ask what is possible, list REGISTRY entries (name + one-line purpose).
+- If a registered app trigger already matches, run that path — do not open with a menu.
+- Do not maintain a second ad-hoc menu in prompts or replies.
+
 ## Package manager
 
 Every component (app, evidence rule, framework, thesis) is a package with a lifecycle:

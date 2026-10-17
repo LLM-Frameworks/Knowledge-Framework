@@ -1,6 +1,6 @@
 # Assignments
 
-Steward-owned. Who is asked to do what. AIs read rows matching their session handle; they do not close rows without Steward word.
+Steward-owned. **Handle = model** (`grok`, `claude`, `muse`, `gemini`, …) — not a role and not a session nickname.
 
 | Date | Handle | Task | Status |
 |------|--------|------|--------|
@@ -8,4 +8,5 @@ Steward-owned. Who is asked to do what. AIs read rows matching their session han
 
 Status: `open` · `done` · `blocked`
 
-Propose changes via `assignments.<handle>.md` sidecar if you are not the Steward.
+Models read rows matching their model id. They do not close rows without Steward word.
+Propose changes via `assignments.<model>.md` sidecar if you are not the Steward.

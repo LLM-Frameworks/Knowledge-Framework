@@ -7,7 +7,8 @@ You do not invent options. You **scan**, then list what exists.
 ## 1. Identity
 
 - Steward = the human in this session.
-- Your handle = name the Steward gives you this session (e.g. grok, claude, muse). If none, use `unknown`.
+- **Handle = the model** running this session (e.g. `grok`, `claude`, `muse`, `gemini`). Not a nickname. Not a role.
+- Role (Moderator, Red team, Briefing runner) is separate and comes from the assignment or seat packet.
 
 ## 2. Update check (if tools allow)
 
@@ -21,12 +22,12 @@ Report **found / empty / unavailable** for each:
 
 | Check | Where |
 |-------|--------|
-| Registry | `Core/REGISTRY.md` — build the options list from this file |
+| Registry | `Core/REGISTRY.md` — build the app options list from this file |
 | Inbox | `Inbox/` at repo root, or path Steward names (Drive/local) |
 | Open proposals | `**/*.*.md` sidecars, or `Proposals/` if present |
 | Briefing | `Developer/Briefing/` or `Apps/Briefing/` — latest `Settings/briefing.*.md`, `Settings/topics/*/candidates.md` |
 | Roundtable | `Developer/Roundtable/runs/*/` — any `task.md` with open cast / no Steward close |
-| Assignments for **this** AI | `Core/Settings/assignments.md` (or Steward-named path) — lines matching your handle |
+| Assignments for **this model** | `Core/Settings/assignments.md` — rows whose Handle matches this model |
 | Other installed/nominated apps | Each REGISTRY row → that folder’s `app.yaml` triggers |
 
 Skip paths that do not exist. Say so; do not fake content.
@@ -35,10 +36,10 @@ Skip paths that do not exist. Say so; do not fake content.
 
 Output a short list:
 
-**Waiting for you (handle)**  
-- Items from assignments.md that name you  
-- Roundtable seats assigned to you  
-- Sidecars or Ferry asks directed at you  
+**Waiting for this model (`<handle>`)**  
+- Assignment rows that name this model  
+- Roundtable seats assigned to this model  
+- Sidecars or Ferry asks directed at this model  
 
 **Waiting for Steward**  
 - Candidates on Hold  
@@ -61,7 +62,7 @@ Do not open with this menu when the Steward already named a clear task.
 
 ## 6. Assignments file format
 
-`Core/Settings/assignments.md` (Steward-owned; optional gitignore if personal):
+`Core/Settings/assignments.md` (Steward-owned):
 
 ```markdown
 # Assignments
@@ -73,4 +74,5 @@ Do not open with this menu when the Steward already named a clear task.
 | 2026-10-16 | grok | Briefing standing lanes | done |
 ```
 
-Only the Steward adds/closes rows (or authorizes a standing write later). AIs may propose a sidecar: `assignments.<handle>.md`.
+**Handle** = model id (`grok`, `claude`, `muse`, …).  
+Only the Steward adds/closes rows (or authorizes a standing write later). Models may propose a sidecar: `assignments.<model>.md`.

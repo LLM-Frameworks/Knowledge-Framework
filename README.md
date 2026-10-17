@@ -13,10 +13,12 @@ This repository provides:
 
 ## Quick start for any AI or human
 
-1. Read `AGENTS.md` (in Core/) first.
+1. Read `Core/AGENTS.md` first.
 2. Read `Core/CORE.md` for the kernel rules.
-3. Check `Apps/` for finished tools you can use immediately.
-4. Check `References/theses/` for settled public positions.
+3. For "what can this system do?" use **`Core/REGISTRY.md`** — that is the only options list.
+4. Check `Apps/` for finished tools; `Developer/` for nominated methods; `References/theses/` for settled public positions.
+
+If a request already matches an app trigger, run that app — do not open with a menu.
 
 ## Core principles
 

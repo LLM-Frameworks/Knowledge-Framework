@@ -1,7 +1,7 @@
 name: Roundtable
 type: method
 status: nominated
-purpose: Multi-seat stress-test of one assignment — Moderator keeps the stake; cast is task-defined.
+purpose: Multi-seat stress-test of one assignment — Moderator keeps the stake; optional court-style phases.
 triggers:
   keywords:
     - roundtable
@@ -10,18 +10,23 @@ triggers:
     - advocate
     - moderator
     - stress-test assignment
+    - discovery
+    - rebuttal
   ideas:
     - when one idea needs structured multi-perspective pressure
-    - when domain seats (Money, Engineer, HR, QC) must speak under one defeat condition
-    - when AIs should collaborate without blurring roles
+    - when domain seats must speak under one defeat condition
+    - when a court-style Discovery / Presentation / Rebuttal is needed
 how_to_use: |
-  1. Fill task-template.md (goal, constraints, defeat/success condition, cast table).
-  2. Assign seats on the task card (Steward or launcher). Model name ≠ role.
-  3. Give each participant: shared task block + their seat-template fill-in + transcript slice.
-  4. Rounds unbounded; stop on convergence, clean deadlock, formal stake revision,
-     Steward interrupt, or repeated drift (moderator enforces).
-  5. Output is fuel/proposal until Steward promotes. Epistemic tags required.
-  6. See method.md for full rules.
+  1. Fill task-template.md (goal, constraints, defeat/success, mode, cast).
+     Session model that co-authors the card often becomes Moderator (Steward confirms).
+  2. Handle = model id. Assign seats on the task card.
+  3. Court-style default phases:
+       Discovery (written evidence/reasoning) → Presentation → Rebuttal.
+       Further rounds only if Steward authorizes.
+  4. Each participant gets: shared task + seat packet + phase-appropriate context.
+  5. Stop on convergence, clean deadlock, formal stake revision, Steward interrupt,
+     or repeated drift. See method.md.
+  6. Output is fuel/proposal until Steward promotes.
 depends_on: []
 epistemic_status: developing
-version: "0.1"
+version: "0.2"

@@ -13,15 +13,15 @@ This repository provides:
 
 ## Working copy
 
-**Day-to-day home is local** (clone on disk, or the Steward’s Google Drive `LLM Frameworks/` tree). Load AGENTS → CORE → MENU from that local copy.
+**Day-to-day home is local** (clone on disk, or the Steward’s Google Drive `LLM Frameworks/` tree). Open **`Core/START.md`** first.
 
 **This GitHub repo is the public update source.** Sync GitHub → local when the Steward wants updates; do not treat GitHub as the live workspace that replaces local. Personal Settings and Briefing data stay local.
 
 ## Quick start for any AI or human
 
 1. Open the **local** working copy the Steward names.
-2. Read `Core/AGENTS.md`, then `Core/CORE.md`.
-3. Unclear intent → `Core/MENU.md` (scans local paths). App names from local `Core/REGISTRY.md` only.
+2. Read `Core/START.md` (load order: AGENTS → CORE → MENU).
+3. Unclear intent → MENU scan. App names from local `Core/REGISTRY.md` only.
 4. Clear app trigger → run that local app.
 5. Optional: compare this GitHub `main` to local and report diffs; apply to local only on Steward word.
 

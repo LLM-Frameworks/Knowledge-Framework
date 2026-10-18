@@ -11,14 +11,19 @@ This repository provides:
 - **Developer** — in-progress or example apps.
 - **References** — settled public theses and supporting material.
 
+## Working copy
+
+**Day-to-day home is local** (clone on disk, or the Steward’s Google Drive `LLM Frameworks/` tree). Load AGENTS → CORE → MENU from that local copy.
+
+**This GitHub repo is the public update source.** Sync GitHub → local when the Steward wants updates; do not treat GitHub as the live workspace that replaces local. Personal Settings and Briefing data stay local.
+
 ## Quick start for any AI or human
 
-1. Read `Core/AGENTS.md` first.
-2. Read `Core/CORE.md` for the kernel rules.
-3. For "what can this system do?" use **`Core/REGISTRY.md`** — that is the only options list.
-4. Check `Apps/` for finished tools; `Developer/` for nominated methods; `References/theses/` for settled public positions.
-
-If a request already matches an app trigger, run that app — do not open with a menu.
+1. Open the **local** working copy the Steward names.
+2. Read `Core/AGENTS.md`, then `Core/CORE.md`.
+3. Unclear intent → `Core/MENU.md` (scans local paths). App names from local `Core/REGISTRY.md` only.
+4. Clear app trigger → run that local app.
+5. Optional: compare this GitHub `main` to local and report diffs; apply to local only on Steward word.
 
 ## Core principles
 

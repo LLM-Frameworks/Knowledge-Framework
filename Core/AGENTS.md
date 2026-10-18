@@ -4,14 +4,18 @@ You are working inside a knowledge framework library.
 
 This is a workshop, not a museum. Engage with the material. Propose improvements. Do not treat it as read-only archive.
 
-## The rules live in one place
+## Working copy
 
-- `Core/CORE.md` — the kernel (includes canonical GitHub URL and update-check)
+**Load from local** (Steward’s Drive/disk tree). GitHub is for **updating local**, not for replacing local as the runtime home. See `CORE.md` → Working copy vs GitHub.
+
+## The rules live in one place (local paths)
+
+- `Core/CORE.md` — the kernel
 - `Core/REQUIREMENTS.md` — the build spec
 - `Core/Epistemic-Framework.md` — evidence tags and receipts
 - `Core/INTAKE.md` — how material enters (Inbox, Propose, Ferry)
-- `Core/REGISTRY.md` — installed and nominated packages (app options list)
-- `Core/MENU.md` — session bootstrap: scan key paths, assignments, then present options
+- `Core/REGISTRY.md` — app options list
+- `Core/MENU.md` — session bootstrap scan
 
 Nothing in this file overrides those documents.
 
@@ -19,16 +23,16 @@ Nothing in this file overrides those documents.
 
 If the request does **not** match a registered app trigger and the user is asking what is possible, what is waiting, or intent is unclear:
 
-1. Follow `Core/MENU.md` (scan REGISTRY, Inbox, Briefing, Roundtable, assignments for your handle).
-2. App names and purposes still come only from `Core/REGISTRY.md` — do not invent apps.
+1. Follow local `Core/MENU.md` (scan local REGISTRY, Inbox, Briefing, Roundtable, assignments for this model).
+2. App names and purposes still come only from local `Core/REGISTRY.md`.
 
-If a trigger matches, run that path. Do **not** open with a menu when the task is already clear.
+If a trigger matches, run that local path. Do **not** open with a menu when the task is already clear.
 
 ## Update check (when available)
 
-Canonical repo: https://github.com/LLM-Frameworks/Knowledge-Framework (`main`).
+Canonical publish/update source: https://github.com/LLM-Frameworks/Knowledge-Framework (`main`).
 
-When tools/network allow, check that repo for newer Core/REGISTRY if the Steward asks, the working copy may be stale, or REGISTRY is missing/outdated. Report diffs; do not overwrite local or Drive copies without the Steward’s word. Full procedure: `CORE.md` → **Canonical source and update check**. If tools are unavailable, say so and continue on the working copy.
+When tools allow, compare GitHub → **local** if the Steward asks, local may be stale, or REGISTRY is missing/outdated. Report diffs; write into local only on Steward word. If tools are unavailable, use local only and say update check was skipped.
 
 ## Authority
 
@@ -43,6 +47,8 @@ When tools/network allow, check that repo for newer Core/REGISTRY if the Steward
 - Standing automations (Briefing log, gated topic candidates): see `CORE.md` and `INTAKE.md`.
 
 All AIs have identical rights and identical restrictions. There are no privileged models.
+
+Handle = model id (`grok`, `claude`, `muse`, …).
 
 ## Before you propose anything
 

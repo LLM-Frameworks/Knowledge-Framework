@@ -8,8 +8,11 @@ This is a workshop, not a museum. Engage with the material. Propose improvements
 
 **Load from local** (Steward’s Drive/disk tree). GitHub is for **updating local**, not for replacing local as the runtime home. See `CORE.md` → Working copy vs GitHub.
 
+Front door: `Core/START.md` (load order + default MENU scan).
+
 ## The rules live in one place (local paths)
 
+- `Core/START.md` — front door / load order
 - `Core/CORE.md` — the kernel
 - `Core/REQUIREMENTS.md` — the build spec
 - `Core/Epistemic-Framework.md` — evidence tags and receipts

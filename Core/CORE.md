@@ -12,36 +12,43 @@ Small, stable, rarely changed. Everything else is registered and managed through
 6. **Removal = archive + log.** Never silent delete. Archive with reason.
 7. **Apps travel; references evolve.** Only apps go through the Developer → Apps pipeline. References are living documents that evolve in place.
 
-## Canonical source and update check
+## Working copy vs GitHub
 
-**Canonical public tree:** https://github.com/LLM-Frameworks/Knowledge-Framework  
-(default branch: `main`)
+**Runtime home is local** — the Steward’s working tree (Google Drive `LLM Frameworks/`, a git clone on disk, or whatever path the Steward names). Sessions load AGENTS, CORE, MENU, REGISTRY, and apps **from that local copy**.
 
-When network/tools are available, an AI **should** check this repo for a newer Core (and REGISTRY) if:
+**GitHub is the update source and public canonical**, not the day-to-day workspace:
 
-- the Steward asks for an update check, or
-- the local/Drive copy may be stale (session start after a long gap, conflict between files, or Steward says “sync”), or
-- orientation is about to list REGISTRY and the working copy has no REGISTRY or an obviously outdated one.
+https://github.com/LLM-Frameworks/Knowledge-Framework (`main`)
 
-**How to check (when tools allow):**
+### Update check (when tools allow)
 
-1. Read remote `Core/CORE.md`, `Core/AGENTS.md`, `Core/REGISTRY.md` from the canonical repo (raw or API).
-2. Compare to the working copy the session is using.
-3. Report differences in plain language — do not silently overwrite local or Drive files.
-4. Apply updates only on the Steward’s word (or Steward-directed sync).
+An AI **should** compare GitHub → local when:
 
-If network/tools are **not** available: say so, use the working copy, and note that an update check was skipped.
+- the Steward asks to sync or check for updates, or
+- the local copy may be stale (long gap, missing Core files, conflicting versions), or
+- MENU/orientation is about to run and local REGISTRY is missing or clearly old.
 
-Private packages (e.g. Cornerstone) have their own repos; this section covers the public Knowledge-Framework tree only.
+**Procedure:**
+
+1. Read remote `Core/CORE.md`, `Core/AGENTS.md`, `Core/REGISTRY.md` (and other paths the Steward names).
+2. Compare to the **local** working copy.
+3. Report what would change — do not silently overwrite local files.
+4. **Apply updates to local only on the Steward’s word** (Steward-directed sync). After a sync, continue from local.
+
+Direction of truth for routine work: **local**. Direction of publish for the public tree: Steward pushes or approves publish to GitHub. Do not treat “read GitHub only and never use local” as the default.
+
+If network/tools are unavailable: use local only; note that update check was skipped.
+
+Private packages (e.g. Cornerstone) have their own repos; this section covers the public Knowledge-Framework tree.
 
 ## Orientation
 
-`Core/REGISTRY.md` is the single options list for this library.
+`Core/REGISTRY.md` **in the local working copy** is the single options list for app names.
 
-- If the user’s intent is unclear, or they ask what is possible, list REGISTRY entries (name + one-line purpose).
-- If a registered app trigger already matches, run that path — do not open with a menu.
-- Do not maintain a second ad-hoc menu in prompts or replies.
-- Prefer REGISTRY from the canonical GitHub repo when an update check has run and the Steward has accepted it.
+- Unclear intent / “what’s possible” / “what’s waiting” → follow local `Core/MENU.md` (scan local paths).
+- Clear app trigger → run that local app path.
+- Do not maintain a second ad-hoc menu.
+- After a Steward-approved sync, local REGISTRY matches GitHub; until then, local wins for the session.
 
 ## Package manager
 
@@ -144,4 +151,4 @@ Installed and nominated apps are announced by the Core via their descriptors, no
 
 ## Path conventions
 
-Paths in this repository are relative to the repository root.
+Paths in this repository are relative to the repository root (local working copy).

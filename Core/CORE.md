@@ -20,11 +20,20 @@ Small, stable, rarely changed. Everything else is registered and managed through
 
 https://github.com/LLM-Frameworks/Knowledge-Framework (`main`)
 
+### Cadence
+
+| Action | How often | What it means |
+|--------|-----------|----------------|
+| **Check** | Often (session start, MENU, Steward asks, stale suspicion) | Compare GitHub → local; **report** diffs only |
+| **Sync** | **Daily** (or when Steward explicitly says sync) | Apply approved updates into local; avoid per-edit Drive pushes |
+
+Checks are cheap. Syncs are deliberate. Do not treat every check as a sync. Do not push routine mid-session writes to Drive unless the Steward says mirror/sync.
+
 ### Update check (when tools allow)
 
 An AI **should** compare GitHub → local when:
 
-- the Steward asks to sync or check for updates, or
+- the Steward asks to check for updates, or
 - the local copy may be stale (long gap, missing Core files, conflicting versions), or
 - MENU/orientation is about to run and local REGISTRY is missing or clearly old.
 
@@ -33,7 +42,7 @@ An AI **should** compare GitHub → local when:
 1. Read remote `Core/CORE.md`, `Core/AGENTS.md`, `Core/REGISTRY.md` (and other paths the Steward names).
 2. Compare to the **local** working copy.
 3. Report what would change — do not silently overwrite local files.
-4. **Apply updates to local only on the Steward’s word** (Steward-directed sync). After a sync, continue from local.
+4. **Apply updates to local only on the Steward’s word** (Steward-directed sync, preferred at most daily). After a sync, continue from local.
 
 Direction of truth for routine work: **local**. Direction of publish for the public tree: Steward pushes or approves publish to GitHub. Do not treat “read GitHub only and never use local” as the default.
 

@@ -14,22 +14,32 @@ Small, stable, rarely changed. Everything else is registered and managed through
 
 ## Working copy vs GitHub
 
-**Runtime home is local** — the Steward’s working tree (Google Drive `LLM Frameworks/`, a git clone on disk, or whatever path the Steward names). Sessions load AGENTS, CORE, MENU, REGISTRY, and apps **from that local copy**.
+**Runtime home is local** — the Steward’s working tree (Google Drive `LLM Frameworks/` / `LLMFrameworks/`, a git clone on disk, or whatever path the Steward names). Sessions load AGENTS, CORE, MENU, REGISTRY, and apps **from that local copy**.
 
 **GitHub is the update source and public canonical**, not the day-to-day workspace:
 
 https://github.com/LLM-Frameworks/Knowledge-Framework (`main`)
 
-### Cadence
+### Hybrid Drive sync and update protocol (locked)
 
-| Action | How often | What it means |
-|--------|-----------|----------------|
-| **Check** | Often (session start, MENU, Steward asks, stale suspicion) | Compare GitHub → local; **report** diffs only |
-| **Sync** | **Daily** (or when Steward explicitly says sync) | Apply approved updates into local; avoid per-edit Drive pushes |
+Binds **every AI**. Background automation must respect data integrity; the Steward stays in command of every file adjustment.
 
-Checks are cheap. Syncs are deliberate. Do not treat every check as a sync. Do not push routine mid-session writes to Drive unless the Steward says mirror/sync.
+| Window | When (America/New_York) | What |
+|--------|-------------------------|------|
+| **Nightly batch scan** | Automated **02:00–04:00** | Refresh local vault indexes across watched Drive folders (`LLMFrameworks/` and active project directories) so the tree is current before morning |
+| **Daily Briefing** | **~05:00**, after overnight refresh | Compile standing lanes (e.g. NFL, Theology, Veterans, Men's Leadership) from the fresh state — no mid-briefing full-tree sync |
+| **Mid-day / active hours** | Outside the sleeping window | **No** auto-mutate of core ledger files; **no** unsupervised writes. On detected file change or addition: **flag the delta** and prompt the Steward in the next active session — process now or hold for the next nightly batch |
 
-### Update check (when tools allow)
+### Check vs sync (all AIs)
+
+| Action | Cadence | What it means |
+|--------|---------|----------------|
+| **Check** | Often (session start, MENU, Steward asks, stale suspicion) | Compare GitHub → local and/or note Drive deltas; **report only** |
+| **Sync** | Nightly batch window, or Steward says sync/mirror | Apply approved updates into local; not per-edit mid-session pushes |
+
+Checks are cheap. Syncs are deliberate. Do not treat every check as a sync.
+
+### Update check procedure (when tools allow)
 
 An AI **should** compare GitHub → local when:
 
@@ -42,13 +52,13 @@ An AI **should** compare GitHub → local when:
 1. Read remote `Core/CORE.md`, `Core/AGENTS.md`, `Core/REGISTRY.md` (and other paths the Steward names).
 2. Compare to the **local** working copy.
 3. Report what would change — do not silently overwrite local files.
-4. **Apply updates to local only on the Steward’s word** (Steward-directed sync, preferred at most daily). After a sync, continue from local.
+4. **Apply updates to local only on the Steward’s word** or under the locked nightly batch policy above. After a sync, continue from local.
 
-Direction of truth for routine work: **local**. Direction of publish for the public tree: Steward pushes or approves publish to GitHub. Do not treat “read GitHub only and never use local” as the default.
+Direction of truth for routine work: **local**. Direction of publish for the public tree: Steward pushes or approves publish to GitHub.
 
 If network/tools are unavailable: use local only; note that update check was skipped.
 
-Private packages (e.g. Cornerstone) have their own repos; this section covers the public Knowledge-Framework tree.
+Private packages (e.g. Cornerstone) have their own repos; this section covers the public Knowledge-Framework tree and the Steward’s watched Drive vaults.
 
 ## Orientation
 
@@ -57,7 +67,7 @@ Private packages (e.g. Cornerstone) have their own repos; this section covers th
 - Unclear intent / “what’s possible” / “what’s waiting” → follow local `Core/MENU.md` (scan local paths).
 - Clear app trigger → run that local app path.
 - Do not maintain a second ad-hoc menu.
-- After a Steward-approved sync, local REGISTRY matches GitHub; until then, local wins for the session.
+- After a Steward-approved or nightly sync, local REGISTRY matches the approved sources; until then, local wins for the session.
 
 ## Package manager
 
@@ -72,7 +82,7 @@ Every component (app, evidence rule, framework, thesis) is a package with a life
 ## Permissions
 
 - **Steward (human):** root. Install, uninstall, upgrade, raise/lower/change tags — no further approval needed.
-- **All AIs:** may propose via sidecar only. May draft installs for the Steward’s word. May never act unilaterally except under Standing authorizations below.
+- **All AIs:** may propose via sidecar only. May draft installs for the Steward’s word. May never act unilaterally except under Standing authorizations below and the hybrid sync protocol above.
 
 ## App lifecycle (canonical)
 
@@ -99,6 +109,8 @@ Developer/Briefing/Settings/briefing.<date>.<model>.md
 ```
 
 (or the same path under Apps/Briefing/Settings/ after graduation).
+
+Preferred timing when automation is enabled: **~05:00 America/New_York**, after the nightly batch refresh.
 
 ### B. Topic candidates (conditional)
 

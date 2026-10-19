@@ -31,11 +31,18 @@ If the request does **not** match a registered app trigger and the user is askin
 
 If a trigger matches, run that local path. Do **not** open with a menu when the task is already clear.
 
-## Update check (when available)
+## Update check and sync (every AI)
+
+These rules bind **all** models equally — grok, claude, chatgpt, gemini, and any other handle. No exceptions.
 
 Canonical publish/update source: https://github.com/LLM-Frameworks/Knowledge-Framework (`main`).
 
-When tools allow, compare GitHub → **local** if the Steward asks, local may be stale, or REGISTRY is missing/outdated. Report diffs; write into local only on Steward word. If tools are unavailable, use local only and say update check was skipped.
+| Action | Cadence | What |
+|--------|---------|------|
+| **Check** | Often | Compare GitHub → local; report diffs only |
+| **Sync** | Daily (or when Steward says sync) | Apply into local only on Steward word |
+
+When tools allow, **check** if the Steward asks, local may be stale, or REGISTRY is missing/outdated. Do not treat a check as a sync. Do not push routine mid-session writes to Drive unless the Steward says mirror or sync. If tools are unavailable, use local only and say the check was skipped. Full procedure: `CORE.md` → Working copy vs GitHub.
 
 ## Authority
 
@@ -51,7 +58,7 @@ When tools allow, compare GitHub → **local** if the Steward asks, local may be
 
 All AIs have identical rights and identical restrictions. There are no privileged models.
 
-Handle = model id (`grok`, `claude`, `muse`, …).
+Handle = model id (`grok`, `claude`, `chatgpt`, `gemini`, …).
 
 ## Before you propose anything
 

@@ -1,7 +1,7 @@
 name: Briefing
 type: method
 status: nominated
-purpose: Produce daily or on-demand briefings from a Steward-owned list of people and topics; feed downstream blog, comment, and debate tools.
+purpose: Engage the Steward with a daily or on-demand scan of watched lanes — tied to References — with menu options to deepen, push back, or promote.
 triggers:
   keywords:
     - briefing
@@ -13,15 +13,36 @@ triggers:
     - when a daily or periodic summary of watched people and topics is needed
     - when feeding a content pipeline from monitored sources
     - when an automated or manual scan of a curated list is requested
+    - morning engagement after overnight vault refresh
 how_to_use: |
-  1. Read Settings/people-topics.md (Steward-owned list).
+  Preferred timing when automated: ~05:00 America/New_York after nightly batch
+  (see Core/CORE.md hybrid protocol).
+
+  1. Read Settings/people-topics.md (Steward-owned list) and any lane
+     Settings/topics/*/candidates.md.
   2. Optionally read Settings/style-anchor.md for voice constraints.
-  3. Produce the briefing.
-     - Manual run: report in conversation; no file required.
+  3. Scan standing lanes (e.g. NFL, Theology, Veterans, Men's Leadership).
+  4. Produce an engaging briefing — not a dump:
+     - Lead with what matters for the Steward today.
+     - Tie each notable item to References where a thesis or topic exists
+       (or note "no Reference yet").
+     - Offer value: strengthen a Reference, flag tension/pushback, or ask
+       one clear engaging question — not a quiz battery.
+     - End with menu options (MENU-style): short labeled choices, e.g.
+       [1] Promote candidate to Reference draft
+       [2] Push back / hold
+       [3] Open Roundtable on X
+       [4] Skip / next lane
+       [5] Something else (Steward directs)
+     Do not open with a menu if the Steward already named a task.
+  5. Output:
+     - Manual run: conversation first; optional file.
      - Automated run: write only Settings/briefing.<date>.<model>.md
-       (standing authorization in Core/CORE.md — no other unattended writes).
-  4. AI may propose additions or changes to the people-topics list via sidecar only.
-  5. Downstream apps (blog, comment, debate) read the dated briefing files when present.
+       (standing authorization in Core/CORE.md).
+     Candidates still append only under Core gates to
+     Settings/topics/<lane>/candidates.md.
+  6. Never auto-edit References/. Propose only; Steward promotes.
+  7. AI may propose people-topics changes via sidecar only.
 depends_on: []
 epistemic_status: developing
-version: "0.1"
+version: "0.2"

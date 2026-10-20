@@ -40,7 +40,7 @@ See `CONTRIBUTING.md` for the full process.
 
 ## Related
 
-- [VA-Claim-Scout](https://github.com/LLM-Frameworks/VA-Claim-Scout) — also shipped under Apps/Claim Scout in this tree
+- [VA-Claim-Scout](https://github.com/LLM-Frameworks/VA-Claim-Scout) — separate public repo for the VA disability claims research framework
 - [Cornerstone](https://github.com/LLM-Frameworks/Cornerstone) — private formation system
 
 ## License

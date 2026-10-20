@@ -8,7 +8,6 @@ Discovery script not yet approved.
 
 | Name | Type | Status | Location | Purpose (one line) |
 |------|------|--------|----------|--------------------|
-| Claim Scout | method | installed | Apps/Claim Scout | VA disability claims research and evidence building |
 | Briefing | method | nominated | Developer/Briefing | Daily/on-demand scan of people and topics → candidates |
 | Blog | method | nominated | Developer/Blog | Draft posts from seeds and candidates (A Stone's Throw) |
 | NFL Contender Rating | method | nominated | Developer/NFL | Contender rating + optional week predictor |

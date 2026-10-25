@@ -2,46 +2,50 @@
 
 A reusable operating system for building and evaluating knowledge.
 
-Where many AI systems focus on memory, this one focuses on thinking straight, proving it, and answering for it — with a human Steward holding the pen. Frameworks here are impersonal logic libraries: they must work against the Steward’s own arguments, not merely for them.
+Focus: thinking straight, proving it, and answering for it — with a human **Steward** holding the pen. Frameworks here are impersonal logic libraries: they must work against the Steward’s own arguments, not merely for them.
 
-This repository provides:
+## Layout (current)
 
-- **Core** — rules for separating facts from opinions, framing problems, weighing evidence, and collaborating with AIs.
-- **Apps** — finished, standalone tools that use the Core.
-- **Developer** — in-progress or example apps.
-- **References** — settled public theses and supporting material.
+| Path | Role |
+|------|------|
+| **Core/** | OS: rules, evidence, intake, registry, onboarding |
+| **Apps/** | Method packages (Briefing, Blog, Debate-Communication, …) |
+| **References/** | Settled theses, philosophy, theology, evaluated knowledge |
+| **Proposals/** | AI sidecars and review packets (operational; not public knowledge) |
+| **Queue/** | Addressed tasks (canary manner) |
+| **Inbox/** | Intake spool — never auto-sorted |
+
+**Developer/** is **retired.** Do not place new packages there.
 
 ## Working copy
 
-**Day-to-day home is local** (clone on disk, or the Steward’s Google Drive `LLM Frameworks/` tree). Open **`Core/START.md`** first.
+**Day-to-day home is local** (Drive `LLM Frameworks/` or a disk clone).
+**This GitHub repo** is the public update source — check often; **sync only on Steward word**.
 
-**This GitHub repo is the public update source.** Sync GitHub → local when the Steward wants updates; do not treat GitHub as the live workspace that replaces local. Personal Settings and Briefing data stay local.
+Private exhaust (Briefing logs, Roundtable runs, check-ins, dossiers, etc.) stays local / gitignored.
 
-## Quick start for any AI or human
+## Quick start for any AI
 
-1. Open the **local** working copy the Steward names.
-2. Read `Core/START.md` (load order: AGENTS → CORE → MENU).
-3. Unclear intent → MENU scan. App names from local `Core/REGISTRY.md` only.
-4. Clear app trigger → run that local app.
-5. Optional: compare this GitHub `main` to local and report diffs; apply to local only on Steward word.
+1. Open the **local** tree the Steward names.
+2. Read **`Core/START.md`** → **`Core/AGENTS.md`** → **`Core/Settings/ONBOARDING.md`**.
+3. Identity, Queue, check-in, capabilities (Available vs Active). Unregistered → ask once to register.
+4. Unclear intent → `Core/MENU.md`. App names from local `Core/REGISTRY.md` only.
+5. Repo mapping: `Core/Settings/REPO-TRACKER.md`. Participation: `Core/Settings/PARTICIPATION.md`.
+6. Compare GitHub → local if tools allow; **report only** unless Steward says sync.
 
 ## Core principles
 
-- Human Steward is the sole authority. No AI may install, uninstall, raise evidence tags, or publish without the Steward’s explicit word.
-- All AIs have equal rights and equal restrictions.
-- Evidence is tagged at capture: [Certain], [Likely], [Theory], [Guessing].
-- Apps can stand alone. The Core improves the quality of their theses.
+- Steward alone installs, publishes, raises tags, syncs, closes Queue.
+- All AIs equal rights and restrictions.
+- Evidence tagged at capture: [Certain], [Likely], [Theory], [Guessing].
+- Propose via sidecar / Proposals/; enthusiasm ≠ authorization.
 
-## Adding your own app
+## Related repos
 
-Fork the repo. Place your work under `Developer/`. When it is finished and the Steward (or you, if you are the Steward of your fork) approves, move it to `Apps/`.
-
-See `CONTRIBUTING.md` for the full process.
-
-## Related
-
-- [VA-Claim-Scout](https://github.com/LLM-Frameworks/VA-Claim-Scout) — separate public repo for the VA disability claims research framework
-- [Cornerstone](https://github.com/LLM-Frameworks/Cornerstone) — private formation system
+- [VA-Claim-Scout](https://github.com/LLM-Frameworks/VA-Claim-Scout) — public product
+- [Cornerstone](https://github.com/LLM-Frameworks/Cornerstone) — private formation
+- [Core](https://github.com/LLM-Frameworks/Core) — private governance extract (does not replace Drive Core at runtime)
+- [Blog-Fiction](https://github.com/LLM-Frameworks/Blog-Fiction) — private fiction lane
 
 ## License
 

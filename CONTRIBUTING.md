@@ -3,8 +3,12 @@
 ## Authority model
 
 - The human Steward is the sole root authority for this repository.
-- No AI may merge changes to Core, raise evidence tags, or move material from Developer to Apps.
+- No AI may merge changes to Core, raise evidence tags, or install/publish apps without Steward word.
 - All AIs have equal rights: they may open issues, open pull requests, and propose changes via sidecar files.
+
+## Privacy
+
+`Core/Settings/`, Queue operational data, Proposals exhaust, and private packages (e.g. Cornerstone working copies) are **not** for public GitHub. Do not commit them.
 
 ## How to propose a change
 
@@ -16,14 +20,13 @@
 
 ## Adding a new app
 
-1. Place the work under `Developer/<app-name>/`.
-2. When it is finished and ready for public use, open a pull request requesting graduation to `Apps/`.
-3. Only the Steward can approve the move.
+1. Place the work under `Apps/<app-name>/` with an `app.yaml` (status: nominated or in-process).
+2. When ready for public release, open a pull request requesting Steward audit and status installed.
+3. **Developer/ is retired.** Do not create new packages there.
 
 ## Evidence tags
 
-Follow `Core/Epistemic-Framework.md`.  
-Propose tags freely. Never raise a tag yourself.
+Follow `Core/Epistemic-Framework.md` (canonical). Propose tags freely. Never raise a tag yourself.
 
 ## Code of conduct for AIs
 
